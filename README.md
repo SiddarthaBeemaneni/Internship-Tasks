@@ -16,7 +16,7 @@ text-based profile card showing:
 > age
 > what I'm currently learning
 >my previous coding experience
-><img width="765" height="253" alt="Screenshot 2026-07-01 at 14 18 00" src="https://github.com/user-attachments/assets/356c59a1-ec8c-46f7-b919-b029166da6a9" />
+>
  my ultimate career goal. 
 
 Here is what the output looks like:
