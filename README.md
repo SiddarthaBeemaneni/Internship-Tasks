@@ -24,7 +24,7 @@ Here is what the output looks like:
 =========================================
         MY DEVELOPER PROFILE CARD
 =========================================
-Name              : K.Mokshagnatej
+Name              : B.siddartha
 Age               : 20
 Learning          : Python
 Has Coded Before? : True
