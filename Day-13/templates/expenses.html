@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% block content %}
+<form><input name="search" placeholder="Search"><select name="category"><option value="">All</option><option>Food</option><option>Transport</option><option>Shopping</option><option>Bills</option><option>Entertainment</option><option>Education</option><option>Health</option><option>Others</option></select><button>Filter</button></form>
+<table><tr><th>Title</th><th>Amount</th><th>Category</th><th>Action</th></tr>
+{% for e in expenses %}<tr><td>{{e.title}}</td><td>{{e.amount}}</td><td>{{e.category}}</td><td><a href="/edit/{{e.id}}">Edit</a> <a href="/delete/{{e.id}}" onclick="return confirmDelete()">Delete</a></td></tr>{% endfor %}
+</table>{% endblock %}

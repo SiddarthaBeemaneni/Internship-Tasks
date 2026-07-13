@@ -1,0 +1,1 @@
+function validateForm(){let a=document.querySelector('[name=amount]').value; if(a<=0){alert('Amount must be greater than zero'); return false;} return true;} function confirmDelete(){return confirm('Delete this expense?');}

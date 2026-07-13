@@ -1,5 +1,19 @@
 Project Title: TicketSense — Helpdesk Ticket Classifier & Router
 
+Course: Flask Template Rendering Applications
+
+Submitted By: ___________________
+
+Register No.: ___________________
+
+Department: ___________________
+
+Institution: ___________________
+
+Guide: ___________________
+
+Academic Year: 2026
+
 Introduction
 
 Organizations receive hundreds of customer support requests every day through emails, websites, and customer portals. Manually reading, categorizing, and assigning these tickets to the correct support team is time-consuming and often results in delays. TicketSense is a Flask-based web application that automates ticket classification and routing using predefined categories and intelligent logic. The application provides a simple interface where users can submit support requests, and the system automatically categorizes and routes them to the appropriate department.
