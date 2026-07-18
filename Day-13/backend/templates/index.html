@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="hero">
+  <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">AI Ticket Triage</div>
+      <h1>Know where every ticket belongs. <span class="accent">Instantly.</span></h1>
+      <p class="hero-sub">TicketSense reads the subject and body of an incoming support ticket and predicts its queue, priority and type in real time — so nothing sits in the wrong inbox.</p>
+      <div class="hero-cta">
+        <a href="#demo" class="btn btn-primary">Try the live demo</a>
+        <a href="#how" class="btn btn-ghost">See how it works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>20,000+</b><span>tickets trained on</span></div>
+        <div class="stat"><b>10</b><span>support queues</span></div>
+        <div class="stat"><b>2</b><span>languages (EN / DE)</span></div>
+        <div class="stat"><b>&lt;100ms</b><span>prediction time</span></div>
+      </div>
+    </div>
+
+    <div class="sorter" aria-hidden="true">
+      <div class="sorter-head">
+        <div class="dot-row"><span></span><span></span><span></span></div>
+        <div class="label">triage_engine.py</div>
+      </div>
+      <div class="scan-card">
+        <div class="beam"></div>
+        <div class="subj">Unable to sync invoices after update</div>
+        <p class="snip">"Since the last release our billing export keeps failing at 90%..."</p>
+      </div>
+      <div class="tag-pop">
+        <span class="chip queue">Billing and Payments</span>
+        <span class="chip priority-high">high priority</span>
+        <span class="chip lang">en</span>
+      </div>
+      <div class="lanes">
+        <div class="lane hot"><div class="n">12</div><div class="l">High</div></div>
+        <div class="lane mid"><div class="n">27</div><div class="l">Medium</div></div>
+        <div class="lane low"><div class="n">9</div><div class="l">Low</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Process</div>
+      <h2>Three steps from inbox to routed</h2>
+      <p>Every ticket goes through the same pipeline, whether it lands from email, a form, or an API call.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Submit</h3>
+        <p>A customer describes their issue in their own words — no dropdowns, no category picking required on their end.</p>
+        <span class="step-arrow">→</span>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Analyze</h3>
+        <p>The text is vectorized and scored by classifiers trained on thousands of resolved tickets to detect queue, priority and type.</p>
+        <span class="step-arrow">→</span>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Route</h3>
+        <p>The ticket lands in the dashboard already tagged and prioritized, ready for the right team to pick up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="features">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Capabilities</div>
+      <h2>Built for real support queues</h2>
+      <p>Everything a small support team needs to stop manually sorting tickets.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="#5A34D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Queue prediction</h3>
+        <p>Automatically sorts tickets into 10 real support queues, from Technical Support to Billing.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v10m0 0l-4-4m4 4l4-4M6 20h12" stroke="#0E7E56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Priority scoring</h3>
+        <p>Flags urgent issues as high priority so they surface before they turn into escalations.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#1367B8" stroke-width="2"/><path d="M12 8v4l3 2" stroke="#1367B8" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Type detection</h3>
+        <p>Distinguishes Incidents, Requests, Problems and Changes so responders know what they're walking into.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="#5A34D6" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Multilingual</h3>
+        <p>Understands English and German tickets out of the box, with the same model handling both.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#0E7E56" stroke-width="2"/><path d="M8 14l3-3 2 2 4-4" stroke="#0E7E56" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Live dashboard</h3>
+        <p>Every submitted ticket is stored and searchable, with filters by status, queue and priority.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5.2L20 9l-4 3.9L17 19l-5-2.7L7 19l1-6.1L4 9l5.5-.8L12 3z" stroke="#1367B8" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <h3>Confidence scores</h3>
+        <p>Every prediction ships with a confidence percentage, so low-confidence tickets can get a second look.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="demo">
+  <div class="container">
+    <div class="demo-wrap">
+      <div class="card">
+        <div class="eyebrow">Live demo</div>
+        <h2 style="font-size:1.5rem;">Submit a test ticket</h2>
+        <p style="margin-bottom:22px;">This runs against the real model — try it in English or German.</p>
+
+        <form id="ticketForm" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Jordan Lee" autocomplete="name" required>
+              <span class="field-error" id="err-name"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="e.g. jordan@company.com" autocomplete="email" required>
+              <span class="field-error" id="err-email"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="e.g. Invoice export keeps failing" maxlength="5000" required>
+            <span class="field-error" id="err-subject"></span>
+          </div>
+          <div class="field">
+            <label for="body">Describe the issue</label>
+            <textarea id="body" name="body" rows="5" placeholder="e.g. Tell us what's happening, what you expected, and anything you've already tried..." maxlength="5000" required></textarea>
+            <span class="field-error" id="err-body"></span>
+          </div>
+          <div class="demo-actions">
+            <button type="button" class="btn btn-ghost" id="sampleBtn">Try sample ticket</button>
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Analyze &amp; submit ticket</button>
+          </div>
+          <p class="form-note" id="formError" style="color:#C81E33; display:none;"></p>
+        </form>
+
+        <div class="result" id="resultBox">
+          <div class="result-head">
+            <span class="result-badge" id="resultBadge">Result</span>
+            <div class="ref" id="resultRef"></div>
+          </div>
+          <div class="confidence-wrap">
+            <div class="confidence-label">
+              <span>Confidence</span>
+              <span id="resConfidenceText">—</span>
+            </div>
+            <div class="confidence-bar"><div class="confidence-fill" id="resConfidenceFill"></div></div>
+          </div>
+          <div class="grid3">
+            <div class="item"><div class="v" id="resQueue">—</div><div class="k">Queue</div></div>
+            <div class="item"><div class="v" id="resPriority">—</div><div class="k">Priority</div></div>
+            <div class="item"><div class="v" id="resType">—</div><div class="k">Type</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-side">
+        <h2>What happens after you hit submit</h2>
+        <ul class="mini-list">
+          <li>
+            <span class="dot">1</span>
+            <p><strong>The text is cleaned and vectorized</strong> using the same TF-IDF pipeline the model was trained with.</p>
+          </li>
+          <li>
+            <span class="dot">2</span>
+            <p><strong>Three classifiers score it in parallel</strong> — one each for queue, priority and ticket type.</p>
+          </li>
+          <li>
+            <span class="dot">3</span>
+            <p><strong>The ticket is saved to the database</strong> with a reference number, and appears immediately on the dashboard.</p>
+          </li>
+        </ul>
+        <a href="{{ url_for('dashboard') }}" class="btn btn-ghost">Open the dashboard →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="demo-wrap">
+      <div>
+        <div class="eyebrow">Contact</div>
+        <h2>Questions about the model or the data?</h2>
+        <p>Send a message and it'll be stored right alongside the ticket data — this form writes to the same database.</p>
+      </div>
+      <div class="card">
+        <form id="contactForm">
+          <div class="field">
+            <label for="cname">Name</label>
+            <input type="text" id="cname" name="name" required>
+          </div>
+          <div class="field">
+            <label for="cemail">Email</label>
+            <input type="email" id="cemail" name="email" required>
+          </div>
+          <div class="field">
+            <label for="cmessage">Message</label>
+            <textarea id="cmessage" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="contactBtn">Send message</button>
+          <p class="form-note" id="contactStatus"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/hero-bg.js') }}"></script>
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}

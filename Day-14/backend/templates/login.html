@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Log in — TicketSense{% endblock %}
+{% block content %}
+<section class="section auth-section">
+  <div class="container auth-wrap">
+    <div class="card auth-card">
+      <div class="eyebrow">Welcome back</div>
+      <h1 class="auth-title">Log in to TicketSense</h1>
+      <p class="auth-sub">Enter your details to access the demo and dashboard.</p>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="jordan@company.com" autocomplete="email" required>
+          <span class="field-error" id="err-email"></span>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" autocomplete="current-password" required>
+          <span class="field-error" id="err-password"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="loginBtn">Log in</button>
+        <p class="form-note" id="formStatus" role="alert"></p>
+      </form>
+
+      <p class="auth-switch">Don't have an account? <a href="{{ url_for('signup') }}">Sign up</a></p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+{% endblock %}

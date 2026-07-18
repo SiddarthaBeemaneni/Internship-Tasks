@@ -1,5 +1,0 @@
-{% extends 'base.html' %}{% block content %}
-<h2>Total: ₹{{total}}</h2>
-{% if highest %}<p>Highest: {{highest.title}} - ₹{{highest.amount}}</p>{% endif %}
-<table>{% for c in category %}<tr><td>{{c.category}}</td><td>{{c.count}}</td></tr>{% endfor %}</table>
-{% endblock %}

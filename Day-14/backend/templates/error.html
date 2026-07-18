@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ code }} — TicketSense{% endblock %}
+{% block content %}
+<section class="section" style="min-height:60vh; display:flex; align-items:center;">
+  <div class="container" style="text-align:center;">
+    <div class="eyebrow">Error {{ code }}</div>
+    <h1 style="margin-bottom:14px;">{{ message }}</h1>
+    <p style="max-width:44ch; margin:0 auto 28px;">Try heading back to the homepage, or check the dashboard if you were looking for a specific ticket.</p>
+    <div class="hero-cta" style="justify-content:center;">
+      <a href="{{ url_for('home') }}" class="btn btn-primary">Back to home</a>
+      <a href="{{ url_for('dashboard') }}" class="btn btn-ghost">Open dashboard</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
